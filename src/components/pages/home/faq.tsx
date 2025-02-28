@@ -24,9 +24,9 @@ export default function FAQ() {
               What investment instruments does WAY II offer?
             </AccordionTrigger>
             <AccordionContent>
-              {`Advanced analytics reporting of investments" refers to using
+              {`Advanced analytics reporting of investments refers to using
               sophisticated data analysis techniques Advanced analytics
-              reporting of investments" refers to using sophisticated data
+              reporting of investments refers to using sophisticated data
               analysis techniques`}
             </AccordionContent>
           </AccordionItem>
@@ -40,7 +40,7 @@ export default function FAQ() {
           <AccordionItem value="item-3">
             <AccordionTrigger>Is it animated?</AccordionTrigger>
             <AccordionContent>
-              Yes. It's animated by default, but you can disable it if you
+              Yes. It`s animated by default, but you can disable it if you
               prefer.
             </AccordionContent>
           </AccordionItem>
