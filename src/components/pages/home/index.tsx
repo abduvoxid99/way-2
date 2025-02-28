@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 
 import Analytics from "./analytics";
 import Banner from "./banner";
+import FAQ from "./faq";
 import Investment from "./investment";
 import Messages from "./messages";
 import Services from "./services";
@@ -20,6 +21,7 @@ export default function Home() {
       <Services />
       <Messages />
       <Investment />
+      <FAQ />
     </>
   );
 }
