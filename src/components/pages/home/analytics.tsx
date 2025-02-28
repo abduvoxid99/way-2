@@ -45,7 +45,7 @@ export default function Analytics() {
             <div className="flex flex-col justify-center items-center">
               <div className="max-w-[412px]">
                 <Typography variant="h2" className="text-white uppercase">
-                  Advanced analytics reporting of investments
+                  Advanced analytics reporting of investments.
                 </Typography>
                 <Typography variant="caption" className="mt-6 text-white">
                   Advanced analytics reporting of investments refers to using
