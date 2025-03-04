@@ -1,22 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
+
 import clsx from "clsx";
 
-import { Container, logo } from "@/shared/ui";
 import { Div } from "@/shared/types/element";
+import { Container, logo } from "@/shared/ui";
 
 import {
   AboutUs,
+  Charity,
+  Contact,
   InvestmentProducts,
   Portfolio,
-  Contact,
+  ScrollButton,
   SelectLanguage,
   SelectNavigation,
-  Charity,
-  ScrollButton,
 } from "./nav";
 
 export const Header = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const onBurgerClick = () => {
     setMobileMenuOpen(!mobileMenuOpen);
