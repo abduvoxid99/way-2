@@ -9,6 +9,7 @@ import Banner from "./banner";
 import FAQ from "./faq";
 import Investment from "./investment";
 import Messages from "./messages";
+import News from "./news";
 import Services from "./services";
 import StackCards from "./stack-cards";
 
@@ -22,6 +23,7 @@ export default function Home() {
       <Messages />
       <Investment />
       <FAQ />
+      <News />
     </>
   );
 }

@@ -12,6 +12,7 @@ import { routeChanged } from "@/model/router";
 
 import "@/styles/globals.css";
 // import { Header, Footer } from "@/widgets/layout";
+// import { Footer } from "@/widgets/layout";
 import Header from "@/widgets/layout/header/header";
 
 export default function App({ Component, pageProps }: AppProps) {
