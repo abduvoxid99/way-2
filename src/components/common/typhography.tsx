@@ -14,11 +14,13 @@ interface TypographyProps extends React.HTMLAttributes<HTMLParagraphElement> {
     | "p-xs"
     | "caption";
   as?: "h1" | "h2" | "h3" | "p";
+  colorVariant?: "white" | "black" | "error";
 }
 
 const Typography: React.FC<TypographyProps> = ({
   as: Tag = "p",
   variant = "p-sm",
+  colorVariant = "black",
   className,
   ...props
 }) => {
@@ -34,7 +36,18 @@ const Typography: React.FC<TypographyProps> = ({
     caption: "font-normal text-[20px] leading-[24px]",
   };
 
-  return <Tag className={cn(baseStyles[variant], className)} {...props} />;
+  const colorStyles = {
+    white: "text-white dark:text-black",
+    error: "text-brand-600",
+    black: "text-black dark:text-white",
+  };
+
+  return (
+    <Tag
+      className={cn(baseStyles[variant], colorStyles[colorVariant], className)}
+      {...props}
+    />
+  );
 };
 
 export default Typography;

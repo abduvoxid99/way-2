@@ -13,6 +13,7 @@ import { routeChanged } from "@/model/router";
 import "@/styles/globals.css";
 // import { Header, Footer } from "@/widgets/layout";
 // import { Footer } from "@/widgets/layout";
+import Footer from "@/widgets/layout/footer/footer";
 import Header from "@/widgets/layout/header/header";
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -22,7 +23,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <RouterListener />
         <Header />
         <Component {...pageProps} />
-        {/* <Footer /> */}
+        <Footer />
       </EffectorNext>
       <Toaster />
     </main>

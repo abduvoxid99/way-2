@@ -12,7 +12,7 @@ export default function Header() {
   return (
     <>
       <TopHeader />
-      <div className="w-full bg-[#981C1E] sticky top-0 z-[100]">
+      <header className="w-full bg-brand-800 sticky top-0 z-[100]">
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-[72px]">
           <Link href="/" className="z-10 cursor-pointer">
             <WhiteLogoIcon />
@@ -23,7 +23,7 @@ export default function Header() {
             Leave a request
           </Button>
         </div>
-      </div>
+      </header>
     </>
   );
 }
