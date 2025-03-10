@@ -20,7 +20,7 @@ export default function Links() {
 const links = [
   {
     name: "Home",
-    href: "/home",
+    href: "/",
   },
   {
     name: "About",
@@ -40,6 +40,6 @@ const links = [
   },
   {
     name: "Contact",
-    href: "/Contact",
+    href: "/contact",
   },
 ];

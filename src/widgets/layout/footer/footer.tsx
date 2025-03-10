@@ -1,7 +1,9 @@
 import Container from "@/components/common/container";
 import Typography from "@/components/common/typhography";
+import { CareerApplicationForm } from "@/widgets/application-form/CareerApplicationForm";
 
 import FooterContact from "./footer-contact";
+import FooterForm from "./footer-form";
 import FooterLinks from "./footer-links";
 import FooterSocial from "./footer-social";
 
@@ -21,6 +23,8 @@ export default function Footer() {
               © 2077 Way2 Invest Management. All rights reserved.
             </Typography>
           </div>
+
+          <FooterForm />
         </div>
       </Container>
     </footer>

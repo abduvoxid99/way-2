@@ -1,13 +1,16 @@
 import React from "react";
-import Image, { StaticImageData } from "next/image";
+
 import Head from "next/head";
-import { Container } from "@/shared/ui";
-import helpIcon from "@/../public/images/help-icon.svg";
-import charityIcon from "@/../public/images/charity-icon.svg";
-import independance from "@/../public/images/independance.jpg";
-import kindergarten from "@/../public/images/kindegarden.jpg";
-import joinevent from "@/../public/images/joinevent.jpg";
+import Image, { StaticImageData } from "next/image";
+
 import { useLocalizedStrings } from "@/shared/lib/useLocaliizedString";
+import { Container } from "@/shared/ui";
+
+import charityIcon from "@/../public/images/charity-icon.svg";
+import helpIcon from "@/../public/images/help-icon.svg";
+import independance from "@/../public/images/independance.jpg";
+import joinevent from "@/../public/images/joinevent.jpg";
+import kindergarten from "@/../public/images/kindegarden.jpg";
 
 export default function HomePage() {
   const localizedStrings = useLocalizedStrings();
@@ -16,16 +19,6 @@ export default function HomePage() {
       <Head>
         <title>Charity comes first</title>
       </Head>
-
-      {/* <section className="bg-gray-50 py-16 text-center">
-        <h1 className="text-5xl font-bold text-gray-900">
-          Благотворительность
-        </h1>
-        <p className="mx-auto mt-4 max-w-[760px] text-lg font-normal text-gray-600">
-          Мы верим, что поддержка тех, кто нуждается, и участие в социальных
-          инициативах играют ключевую роль в создании более справедливого мира.
-        </p>
-      </section> */}
 
       <section className="py-16 pt-[105px] xl:py-24">
         <Container>

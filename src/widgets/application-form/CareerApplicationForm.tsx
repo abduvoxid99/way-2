@@ -1,27 +1,32 @@
 import React from "react";
-import { useForm } from "react-hook-form";
-import InputMask from "react-input-mask";
+
 import clsx from "clsx";
 import { useUnit } from "effector-react";
+import Image from "next/image";
+import { useForm } from "react-hook-form";
+import InputMask from "react-input-mask";
+
 import {
-  FieldWrapper,
-  Label,
-  InputGroup,
-  Input,
-  Textarea,
   Checkbox,
+  FieldWrapper,
+  Input,
+  InputGroup,
+  Label,
+  Textarea,
 } from "@/shared/ui/fields";
-import { Button, Spinner } from "@/shared/ui";
+
+import { api } from "@/shared/api";
+import { useLocalizedStrings } from "@/shared/lib/useLocaliizedString";
+import { ApplicationBody } from "@/shared/types/api";
 import {
   Input as InputProps,
   Textarea as TextareaProps,
 } from "@/shared/types/element";
-import { ApplicationBody } from "@/shared/types/api";
-import { $pending, formSubmitted } from "./model";
-import { api } from "@/shared/api";
-import Image from "next/image";
+import { Button, Spinner } from "@/shared/ui";
+
 import uploadIcon from "@/../public/images/upload-icon.svg";
-import { useLocalizedStrings } from "@/shared/lib/useLocaliizedString";
+
+import { $pending, formSubmitted } from "./model";
 
 interface FormValues extends ApplicationBody {
   policy?: boolean;
@@ -40,7 +45,7 @@ export const CareerApplicationForm = () => {
 
   return (
     <form onSubmit={form.handleSubmit(submit)}>
-      <div className="mx-auto mt-16 flex max-w-[480px] flex-col gap-y-6">
+      <div className="mx-auto mt-16 flex max-w-[480px] flex-col gap-y-6 rounded bg-white p-6">
         <div className="flex flex-col gap-y-6 lg:flex-row lg:gap-x-8">
           <FirstNameField
             invalid={Boolean(form.formState.errors.first_name)}
