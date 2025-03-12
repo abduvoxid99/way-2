@@ -5,7 +5,14 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    remotePatterns: [{ protocol: "https", hostname: "cdn.u-code.io" }],
+    remotePatterns: [
+      { protocol: "https", hostname: "cdn.u-code.io" },
+      {
+        protocol: "https",
+        hostname: "s3-alpha-sig.figma.com",
+        pathname: "/img/**",
+      },
+    ],
   },
   i18n: {
     locales: ["ru", "uz", "en"],
