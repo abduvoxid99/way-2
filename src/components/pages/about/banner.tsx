@@ -8,7 +8,7 @@ import BlackLogoIcon from "@/icons/black-logo";
 
 export default function Banner() {
   return (
-    <section className="py-20">
+    <section className="py-20 bg-[#F7F8F6]">
       <Container size="md">
         <div className="grid grid-cols-[repeat(auto-fit,minmax(510px,1fr))] gap-5">
           <div className="border rounded-sm py-20 px-10 ">
