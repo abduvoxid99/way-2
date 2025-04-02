@@ -4,7 +4,7 @@ import Image from "next/image";
 
 import Typography from "@/components/common/typhography";
 
-export default function NewCard() {
+export default function NewsCard() {
   return (
     <div className="rounded-sm border border-[#EDEDED] p-10">
       <div className="w-full max-w-[250px]">

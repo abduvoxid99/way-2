@@ -1,13 +1,7 @@
 import React from "react";
 
-import Container from "@/components/common/container";
+import News from "@/components/pages/news";
 
-export default function About() {
-  return (
-    <div className="min-h-screen py-20">
-      <Container>
-        <h1 className="text-[56px] text-center">News page</h1>
-      </Container>
-    </div>
-  );
+export default function NewsPage() {
+  return <News />;
 }

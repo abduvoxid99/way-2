@@ -1,10 +1,9 @@
 import React from "react";
 
+import NewsCard from "@/components/blocks/components/news-card";
 import Container from "@/components/common/container";
 import Typography from "@/components/common/typhography";
 import { Button } from "@/components/ui/button";
-
-import NewCard from "./components/new-card";
 
 export default function News() {
   return (
@@ -17,7 +16,7 @@ export default function News() {
 
         <div className="grid grid-cols-3 gap-5 mt-20">
           {[1, 2, 3].map((item) => (
-            <NewCard key={item} />
+            <NewsCard key={item} />
           ))}
         </div>
         <div className="flex justify-center">
