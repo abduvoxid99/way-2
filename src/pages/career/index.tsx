@@ -11,7 +11,7 @@ import clock from "@/../public/images/clock.svg";
 import markerPin from "@/../public/images/marker-pin.svg";
 
 import Container from "@/components/common/container";
-import CSlider from "@/components/ui/slider";
+import CSlider from "@/components/common/slider";
 import { careers } from "@/mock/career";
 
 interface CareerItem {
