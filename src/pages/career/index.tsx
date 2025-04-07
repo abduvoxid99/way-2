@@ -1,24 +1,62 @@
 import React from "react";
-import { default as Image } from "next/image";
+
 import Head from "next/head";
-import { Container } from "@/shared/ui";
-import markerPin from "@/../public/images/marker-pin.svg";
-import clock from "@/../public/images/clock.svg";
+import { default as Image } from "next/image";
 import Link from "next/link";
-import { useLocalizedStrings } from "@/shared/lib/useLocaliizedString";
-import { careers } from "@/mock/career";
+
 import { lib } from "@/shared/lib";
+import { useLocalizedStrings } from "@/shared/lib/useLocaliizedString";
+
+import clock from "@/../public/images/clock.svg";
+import markerPin from "@/../public/images/marker-pin.svg";
+
+import Container from "@/components/common/container";
+import CSlider from "@/components/ui/slider";
+import { careers } from "@/mock/career";
+
+interface CareerItem {
+  title: string;
+  subtitle: string;
+}
 
 export default function Career() {
   const localizedStrings = useLocalizedStrings();
   const addLocaleSuffix = lib.localeWithRu.useAddLocaleSuffixWitRu();
+
+  const careerItems: CareerItem[] = [
+    {
+      title: localizedStrings["career_profession_1_title"],
+      subtitle: localizedStrings["career_profession_1_subtitle"],
+    },
+    {
+      title: localizedStrings["career_profession_2_title"],
+      subtitle: localizedStrings["career_profession_2_subtitle"],
+    },
+    {
+      title: localizedStrings["career_profession_3_title"],
+      subtitle: localizedStrings["career_profession_3_subtitle"],
+    },
+    {
+      title: localizedStrings["career_profession_4_title"],
+      subtitle: localizedStrings["career_profession_4_subtitle"],
+    },
+    {
+      title: localizedStrings["career_profession_5_title"],
+      subtitle: localizedStrings["career_profession_5_subtitle"],
+    },
+    {
+      title: localizedStrings["career_profession_3_title"],
+      subtitle: localizedStrings["career_profession_6_subtitle"],
+    },
+  ];
+
   return (
     <div>
       <Head>
         <title>Career</title>
       </Head>
 
-      {/* <section className="bg-gray-50 py-16 xl:py-24">
+      <section className="bg-gray-50 py-16 xl:py-24">
         <Container>
           <div className="text-center text-4xl font-semibold text-gray-900 xl:text-5xl">
             Карьера
@@ -27,66 +65,20 @@ export default function Career() {
             Познакомьтесь с нами поближе и присоединяйтесь к нам
           </div>
         </Container>
-      </section> */}
+      </section>
 
-      <section className="pt-[105px] xl:pt-32">
-        <Container>
+      <section className="pt-[105px] xl:pt-32 overflow-hidden">
+        <Container size="md">
           <div className="border-b border-solid border-b-gray-200 pb-16 xl:pb-24">
-            <div className="text-center text-3xl font-semibold text-gray-900 xl:text-4xl">
+            <div className="text-center text-3xl font-semibold text-gray-900 xl:text-4xl mb-20">
               {localizedStrings["career_title"]}
             </div>
-            <div className="mx-auto mt-4 max-w-[760px] text-center text-lg font-normal text-gray-600 xl:text-xl">
-              {localizedStrings["career_subtitle"]}
-            </div>
-            <div className="mt-14 xl:flex xl:gap-x-16">
-              <div>
-                <div className="text-base font-normal text-gray-600 xl:text-lg">
-                  <span className="block font-bold">
-                    {localizedStrings["career_profession_1_title"]}
-                  </span>
-                  {localizedStrings["career_profession_1_subtitle"]}
-                </div>
 
-                <div className="mt-5 text-base font-normal text-gray-600 xl:text-lg">
-                  <span className="block font-bold">
-                    {localizedStrings["career_profession_2_title"]}
-                  </span>
-                  {localizedStrings["career_profession_2_subtitle"]}
-                </div>
-
-                <div className="mt-5 text-base font-normal text-gray-600 xl:text-lg">
-                  <span className="block font-bold">
-                    {localizedStrings["career_profession_3_title"]}
-                  </span>
-                  {localizedStrings["career_profession_3_subtitle"]}
-                </div>
-              </div>
-
-              <div>
-                <div className="text-base font-normal text-gray-600 xl:text-lg">
-                  <span className="block font-bold">
-                    {localizedStrings["career_profession_4_title"]}
-                  </span>
-                  {localizedStrings["career_profession_4_subtitle"]}
-                </div>
-
-                <div className="mt-5 text-base font-normal text-gray-600 xl:text-lg">
-                  <span className="block font-bold">
-                    {localizedStrings["career_profession_5_title"]}
-                  </span>
-                  {localizedStrings["career_profession_5_subtitle"]}
-                </div>
-
-                <div className="mt-5 text-base font-normal text-gray-600 xl:text-lg">
-                  {localizedStrings["career_profession_6_title"]}
-                  {localizedStrings["career_profession_6_subtitle"]}
-                </div>
-              </div>
-            </div>
+            <CSlider leftTitle="career_subtitle" sliderItems={careerItems} />
           </div>
         </Container>
       </section>
-      <section className="py-16 xl:py-24">
+      {/* <section className="py-16 xl:py-24">
         <Container>
           <div className="text-center text-3xl font-semibold text-gray-900 xl:text-4xl">
             {localizedStrings["career_jobs_title"]}
@@ -105,7 +97,7 @@ export default function Career() {
             ))}
           </div>
         </Container>
-      </section>
+      </section> */}
     </div>
   );
 }
