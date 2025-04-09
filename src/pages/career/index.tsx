@@ -100,9 +100,7 @@ export default function Career() {
           <div className="text-center text-3xl font-semibold text-gray-900 xl:text-4xl">
             {localizedStrings["career_jobs_title"]}
           </div>
-          {/* <div className="mt-4 text-center text-lg font-normal text-gray-600 xl:text-xl">
-            {localizedStrings["career_jobs_subtitle"]}
-          </div> */}
+
           <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-5">
             {careers?.map((item) => (
               <OpenPosition

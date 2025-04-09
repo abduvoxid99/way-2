@@ -91,7 +91,7 @@ export default function NewsSlider() {
         }}>
         {newsItems.map((item) => (
           <SwiperSlide key={item.id}>
-            <div className="bg-white rounded-xl p-4 shadow hover:shadow-md transition flex flex-col min-h-[250px]">
+            <div className="bg-white rounded-xl p-4 border border-gray-200 transition flex flex-col min-h-[250px]">
               <Image
                 src="/images/home/akfa.svg"
                 alt="Responsive Image"
