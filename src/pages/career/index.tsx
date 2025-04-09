@@ -8,9 +8,8 @@ import { lib } from "@/shared/lib";
 import { useLocalizedStrings } from "@/shared/lib/useLocaliizedString";
 
 import Container from "@/components/common/container";
+import CSlider from "@/components/common/slider";
 import Typography from "@/components/common/typhography";
-import { Button } from "@/components/ui/button";
-import CSlider from "@/components/ui/slider";
 import { careers } from "@/mock/career";
 
 interface CareerItem {

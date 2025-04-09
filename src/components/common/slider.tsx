@@ -4,6 +4,7 @@ import { useLocalizedStrings } from "@/shared/lib/useLocaliizedString";
 
 import ArrowLeftIcon from "@/icons/arrow-left";
 import ArrowRightIcon from "@/icons/arrow-right";
+import { cn } from "@/lib/utils";
 
 type LocalizedStringKey = keyof ReturnType<typeof useLocalizedStrings>;
 
@@ -15,6 +16,8 @@ interface CareerItem {
 interface CSliderProps {
   leftTitle: LocalizedStringKey;
   sliderItems: CareerItem[];
+  children?: React.ReactNode;
+  className?: string;
 }
 
 interface ControlButtonProps {
@@ -32,7 +35,12 @@ const ControlButton: React.FC<ControlButtonProps> = ({ onClick, icon }) => (
   </button>
 );
 
-const CSlider: React.FC<CSliderProps> = ({ leftTitle, sliderItems }) => {
+const CSlider: React.FC<CSliderProps> = ({
+  leftTitle,
+  sliderItems,
+  children,
+  className,
+}) => {
   const localizedStrings = useLocalizedStrings();
   const [activeIndex, setActiveIndex] = useState(0);
   const [translateX, setTranslateX] = useState(0);
@@ -71,23 +79,29 @@ const CSlider: React.FC<CSliderProps> = ({ leftTitle, sliderItems }) => {
         </div>
       </div>
 
-      <div className="max-md:pl-5">
-        <div
-          ref={sliderRef}
-          className="flex transition-transform duration-500 ease-linear gap-5 mt-14"
-          style={{ transform: `translateX(${translateX}px)` }}>
-          {sliderItems.map((item, index) => (
-            <div
-              key={index}
-              className="mt-5 p-10 min-w-[510px] max-w-[510px] border border-[#EDEDED] rounded-[5px]">
-              <span className="block text-2xl font-bold mb-5 text-black">
-                {item.title}
-              </span>
-              <p className="text-[18px] line-clamp-5">{item.subtitle}</p>
-            </div>
-          ))}
+      {children ? (
+        <div ref={sliderRef} className={cn(className)}>
+          {children}
         </div>
-      </div>
+      ) : (
+        <div className={cn("max-md:pl-5", className)}>
+          <div
+            ref={sliderRef}
+            className="flex transition-transform duration-500 ease-linear gap-5 mt-14"
+            style={{ transform: `translateX(${translateX}px)` }}>
+            {sliderItems.map((item, index) => (
+              <div
+                key={index}
+                className="mt-5 p-10 min-w-[510px] max-w-[510px] border border-[#EDEDED] rounded-[5px]">
+                <span className="block text-2xl font-bold mb-5 text-black">
+                  {item.title}
+                </span>
+                <p className="text-[18px] line-clamp-5">{item.subtitle}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </>
   );
 };

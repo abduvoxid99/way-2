@@ -33,7 +33,7 @@ export default function FooterForm() {
               <Typography variant="p-md" className="mt-5">
                 <span className="text-brand-300">To:</span> Way 2 Investment
               </Typography>
-              <Typography variant="p-md">
+              <Typography className="mt-2" variant="p-md">
                 <span className="text-brand-300">Topic:</span> Investment
                 advices
               </Typography>
@@ -57,7 +57,7 @@ export default function FooterForm() {
               <p className="text-sm font-semibold">My region or District is</p>
               <Select>
                 <SelectTrigger className="w-[180px] bg-white h-12 rounded-sm border border-brand-200">
-                  <SelectValue placeholder="Select a fruit" />
+                  <SelectValue placeholder="Select a region" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectGroup>

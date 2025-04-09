@@ -31,10 +31,10 @@ export default function NewTabs({
               key={tab.label}
               onClick={() => setActiveTab(tab.label)}
               className={cn(
-                "px-6 py-2 rounded-full text-sm font-medium transition-colors",
+                "px-6 py-2 rounded-full border border-transparent text-sm font-medium transition-colors",
                 activeTab === tab.label
-                  ? "bg-red-500 text-white"
-                  : "bg-white text-gray-800 border border-gray-200 hover:bg-gray-50",
+                  ? "bg-[#D42427] text-white"
+                  : "bg-white text-black border border-[#DCE0D7] hover:bg-gray-50",
               )}>
               {tab.label}
             </button>
