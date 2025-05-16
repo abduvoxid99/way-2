@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { useRouter } from "next/router";
-import clsx from "clsx";
-import * as Popover from "@radix-ui/react-popover";
 
-import { Li as LiType, Div } from "@/shared/types/element";
+import * as Popover from "@radix-ui/react-popover";
+import clsx from "clsx";
+import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
+
 import { lib } from "@/shared/lib";
 import { Locale } from "@/shared/lib/locale";
-
-import language from "@/../public/images/language.svg";
-import chevronDown from "@/../public/images/chevron-down.svg";
 import { useLocalizedStrings } from "@/shared/lib/useLocaliizedString";
+import { Div, Li as LiType } from "@/shared/types/element";
+
+import chevronDown from "@/../public/images/chevron-down.svg";
+import language from "@/../public/images/language.svg";
 
 export const AboutUs = ({ onClick }: { onClick?: () => void }) => {
   const localizedStrings = useLocalizedStrings();

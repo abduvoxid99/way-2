@@ -1,5 +1,6 @@
+import { Head, Html, Main, NextScript } from "next/document";
+
 import AmoCrm from "@/widgets/amo-crm";
-import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
   return (
@@ -7,7 +8,7 @@ export default function Document() {
       <Head>
         <link rel="icon" type="image/jpeg" href="/favicon.jpg" />
 
-        <script
+        {/* <script
           dangerouslySetInnerHTML={{
             __html: `
               (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -17,9 +18,9 @@ export default function Document() {
               })(window,document,'script','dataLayer','GTM-WCG4GXWT');
             `,
           }}
-        />
+        /> */}
 
-        <script
+        {/* <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-T72MM7NJTQ"></script>
         <script
@@ -31,9 +32,9 @@ export default function Document() {
               gtag('config', 'G-T72MM7NJTQ');
             `,
           }}
-        />
+        /> */}
 
-        <script
+        {/* <script
           dangerouslySetInnerHTML={{
             __html: `
               (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){
@@ -51,7 +52,7 @@ export default function Document() {
               });
             `,
           }}
-        />
+        /> */}
         <noscript>
           <div>
             <img
@@ -72,7 +73,7 @@ export default function Document() {
           content="ykb91hk8ql8t9nfgbypekkody0bo16"
         />
 
-        <script
+        {/* <script
           dangerouslySetInnerHTML={{
             __html: `
               !function(f,b,e,v,n,t,s)
@@ -87,9 +88,32 @@ export default function Document() {
               fbq('track', 'PageView');
             `,
           }}
+        /> */}
+
+        {/* <!-- Google Tag Manager --> */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TL67LB63');
+`,
+          }}
         />
+        {/* <!-- End Google Tag Manager --> */}
       </Head>
       <body>
+        {/* <!-- Google Tag Manager (noscript) --> */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-TL67LB63"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}></iframe>
+        </noscript>
+        {/* <!-- End Google Tag Manager (noscript) --> */}
         {/* <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -103,7 +127,7 @@ export default function Document() {
           }}
         /> */}
 
-        <noscript>
+        {/* <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-WCG4GXWT"
             height="0"
@@ -119,7 +143,7 @@ export default function Document() {
             src="https://www.facebook.com/tr?id=1564672360928893&ev=PageView&noscript=1"
             alt=""
           />
-        </noscript>
+        </noscript> */}
 
         <Main />
         <NextScript />
